@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-gap: 10px;
+}
+
+.grid-item {
+    width: 80px;
+    height: 80px;
+    background-color: purple;
+    position: relative;
+}
+
+.small-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    position: absolute;
+}
+
+.small-boxes div {
+    width: 14px;
+    height: 14px;
+    background-color: orange;
+}
+
+.top-left { top: 5px; left: 5px; }
+.top-right { top: 5px; right: 5px; }
+.bottom-left { bottom: 5px; left: 5px; }
+.bottom-center { bottom: 5px; left: 50%; transform: translateX(-50%); }
+.vertical { flex-direction: column; top: 5px; left: 5px; }
+.mixed { top: 5px; left: 5px; display: grid; grid-template-columns: repeat(3, auto); }
